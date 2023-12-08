@@ -1,5 +1,5 @@
 {
-  "name": "@lowcode-set-up-platform/shared",
+  "name": "@lowcode-set-up-platform/schema",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.ts",

@@ -1,5 +1,5 @@
 {
-  "name": "lowcode-platform-react",
+  "name": "lowcode-platform-react-example",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -9,18 +9,14 @@
     "lint:script": "eslint --ext .js,.jsx,.ts,.tsx --fix --quiet ./src",
     "lint:style": "stylelint --fix \"src/**/*.{css,scss}\"",
     "preview": "vite preview",
-    "prepare": "husky install",
     "commit": "git-cz",
     "lint:ls-lint": "ls-lint",
     "lint:lint-staged": "lint-staged -c ./.husky/lint-staged.config.js"
   },
   "dependencies": {
-    "@lowcode-set-up-platform/editor": "workspace:^",
-    "@lowcode-set-up-platform/lodash": "workspace:^",
     "antd": "^5.6.4",
     "axios": "^1.4.0",
     "classnames": "^2.3.2",
-    "immer": "^10.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "zustand": "^4.3.9"
@@ -64,9 +60,7 @@
     "vite-tsconfig-paths": "^4.2.0",
     "windicss": "^3.5.6"
   },
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": [],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
