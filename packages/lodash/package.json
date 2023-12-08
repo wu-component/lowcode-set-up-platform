@@ -1,5 +1,5 @@
 {
-  "name": "@jeffery/lodash",
+  "name": "@lowcode-set-up-platform/lodash",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.ts",

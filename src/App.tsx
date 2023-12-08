@@ -1,12 +1,15 @@
 import './App.scss'
-import editor from '@jeffery/editor'
-
-editor()
+import {Editor} from "@lowcode-set-up-platform/editor";
+import {useRef} from "react";
+import {EditorService} from "@lowcode-set-up-platform/editor/src/core";
 function App() {
+  const editorService = useRef(new EditorService())
 
   return (
     <>
-      编辑器
+      <div className='editor-content__container'>
+        <Editor editorService={editorService.current} />
+      </div>
     </>
   )
 }

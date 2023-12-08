@@ -6,9 +6,6 @@ import react from '@vitejs/plugin-react'
 // 如果类型报错，需要安装 @types/node: pnpm add @types/node -D -w
 import path from 'path'
 import autoprefixer from 'autoprefixer'
-import windi from "vite-plugin-windicss"
-import viteEslint from 'vite-plugin-eslint'
-import viteStylelint from 'vite-plugin-stylelint'
 import tsconfigPaths from "vite-tsconfig-paths";
 
 // 全局 scss 文件的路径
@@ -19,13 +16,6 @@ const variablePath = normalizePath(path.resolve('./src/assets/scss/variable.scss
 export default defineConfig({
   plugins: [
     react(),
-    windi(),
-    viteEslint(),
-    viteStylelint({
-      // 对某些文件排除检查
-      // @ts-ignore
-      exclude: /windicss|node_modules/
-    }),
     tsconfigPaths()
   ],
   // css 相关的配置
@@ -49,6 +39,22 @@ export default defineConfig({
           overrideBrowserslist: ['Chrome > 40', 'ff > 31', 'ie 11']
         })
       ]
+    }
+  },
+  build: {
+    lib: {
+      formats: ['umd', "es", "cjs", 'iife'],
+      entry: path.resolve(__dirname, './src/index.tsx'),
+      name: 'MyLib',
+      fileName: format => `${format}.js`
+    },
+    rollupOptions: {
+      external: ['react'],
+      output: {
+        globals: {
+          react: 'React'
+        }
+      }
     }
   }
 })
