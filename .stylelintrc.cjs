@@ -17,6 +17,10 @@ module.exports = {
   // 配置 rules
   rules: {
     // 开启 Prettier 自动格式化功能
-    'prettier/prettier': true
+    'prettier/prettier': true,
+    'rule-empty-line-before': null,
+    'selector-class-pattern': null,
+    'comment-empty-line-before': null,
+    'comment-whitespace-inside': null,
   }
 };
