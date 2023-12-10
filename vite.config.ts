@@ -1,4 +1,4 @@
-import { 
+import {
   defineConfig,
   normalizePath
 } from 'vite'
@@ -20,12 +20,12 @@ export default defineConfig({
   plugins: [
     react(),
     windi(),
-    viteEslint(),
-    viteStylelint({
+    // viteEslint(),
+    /*viteStylelint({
       // 对某些文件排除检查
       // @ts-ignore
       exclude: /windicss|node_modules/
-    }),
+    }),*/
     tsconfigPaths()
   ],
   // css 相关的配置

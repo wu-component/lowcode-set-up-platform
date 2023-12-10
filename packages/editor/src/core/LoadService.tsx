@@ -27,6 +27,7 @@ export class LoadService {
         .then(text => {
           // 记录最后一个 window 的属性
           const lastWindowKey = Object.keys(window).pop()
+          console.log(text)
 
           // eval 执行
           eval(text)
