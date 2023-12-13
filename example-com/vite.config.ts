@@ -51,7 +51,7 @@ export default defineConfig(({ mode}) => {
       lib: {
         formats: ['umd', "es", "cjs", 'iife'],
         entry: path.resolve(__dirname, './src/index.tsx'),
-        name: 'MyLib',
+        name: 'ComponentLoadUmd',
         fileName: format => `${format}.js`
       },
       rollupOptions: {

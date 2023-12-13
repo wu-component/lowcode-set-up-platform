@@ -13,16 +13,17 @@ export const DynamicComponent = (props: DynamicComponentIProps) => {
   const [UmdCom, setUmdCom] = useState<JSX.Element>()
 
   useEffect(() => {
+    if (!url) {
+      return
+    }
     console.log("开始加载组件")
     const loadService = new LoadService(url, {
       enableSandbox: true
     })
     setLoading(true)
     loadService.importScript().then((res: JSX.Element) => {
-      console.log("222222222222")
-      console.log(res)
       setLoading(false)
-      setUmdCom(res)
+      setUmdCom(() => res)
     }).catch((e: Error) => {
       console.log(e)
       setError(e)
@@ -34,6 +35,5 @@ export const DynamicComponent = (props: DynamicComponentIProps) => {
   if (loading) return <div>loading...</div>
   if (!UmdCom) return <div>加载失败，请检查</div>;
 
-  // @ts-ignore
   return <UmdCom {...umdProps}>{ children }</UmdCom>
 }

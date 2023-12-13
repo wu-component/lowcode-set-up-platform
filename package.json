@@ -12,7 +12,6 @@
   "dependencies": {
     "@lowcode-set-up-platform/editor": "workspace:^",
     "@lowcode-set-up-platform/lodash": "workspace:^",
-    "antd": "^5.6.4",
     "axios": "^1.4.0",
     "classnames": "^2.3.2",
     "immer": "^10.0.2",
@@ -29,6 +28,7 @@
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "@typescript-eslint/parser": "^5.61.0",
     "@vitejs/plugin-react": "^4.0.1",
+    "antd": "^5.6.4",
     "autoprefixer": "^10.4.14",
     "commitizen": "^4.3.0",
     "commitlint-config-cz": "^0.13.3",

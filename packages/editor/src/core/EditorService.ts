@@ -17,10 +17,7 @@ class EditorService {
    * @private
    */
   public componentList: ComponentInterface[] = []
-  constructor() {
-    console.log("编辑器初始化")
-    console.log(Schema);
-  }
+  constructor() {}
 }
 
 export {
